@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>抽奖活动页面</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no">
+<script type="text/javascript" src='./js/hotcss.js'></script>
+<script type="text/javascript" src='./js/jquery-3.1.1.js'></script>
+<script type="text/javascript" src='./js/jqueryRotate.js'></script>
+</head>
+<style type="text/css">
+	.turntable-bg {
+		position: relative;
+	}
+
+	.turntable-bg .pointer {
+		position: absolute;
+		left: 50%;
+		top: 3.8rem;
+		transform:translateX(-50%);
+		z-index: 8;
+	}
+
+	.turntable-bg .pointer img {
+		width: 3rem;
+	}
+
+	.turntable-bg .rotate {
+		position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+		top: 0.9rem;
+	}
+
+	.rotate img {
+		width: 10rem;
+		transform: rotate(-20deg);
+	}
+</style>
+<body>
+	<div class="turntable-bg">
+	  	<div class="pointer"><img src="./img/pointer.png" alt="pointer"/></div>
+	   	<div class="rotate" ><img id="rotate" src="./img/turntable.png" alt="turntable"/></div>
+	</div>
+</body>
+<script type="text/javascript">
+/*eslint-disable */
+$(function() {
+	var rotateFn = function(awards, angles, txt) {
+		$('#rotate').stopRotate();
+		$('#rotate').rotate({
+			angle: 0,
+			animateTo: angles + 720,
+			duration: 1000,
+			callback: function() {
+				alert(txt);
+			}
+		});
+	};
+
+	$('.pointer').click(function() {
+		var item = rnd(0, 6);
+
+		switch (item) {
+			case 0:
+				rotateFn(0, -20, '谢谢参与');
+				break;
+			case 1:
+				rotateFn(1, 30, '免单4999元');
+				break;
+			case 2:
+				rotateFn(2, 80, '免单50元');
+				break;
+			case 3:
+				rotateFn(3, 130, '免单10元');
+				break;
+			case 4:
+				rotateFn(4, 180, '免单5元');
+				break;
+			case 5:
+				rotateFn(5, 230, '免分期服务费');
+				break;
+			case 6:
+				rotateFn(6, 280, '提高白条额度');
+				break;
+		}
+
+		console.log(item);
+	});
+});
+
+function rnd(n, m) {
+	return Math.floor(Math.random() * (m + 1));
+}
+</script>
+</html>
