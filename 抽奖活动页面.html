@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>抽奖活动页面</title>
-<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no">
-<script type="text/javascript" src='./js/hotcss.js'></script>
-<script type="text/javascript" src='./js/jquery-3.1.1.js'></script>
-<script type="text/javascript" src='./js/jqueryRotate.js'></script>
-<link rel="stylesheet" type="text/css" href="./css/global.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>抽奖活动页面</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no">
+	<script type="text/javascript" src='./js/hotcss.js'></script>
+	<script type="text/javascript" src='./js/jquery-3.1.1.js'></script>
+	<script type="text/javascript" src='./js/jqueryRotate.js'></script>
+	<link rel="stylesheet" type="text/css" href="./css/global.css">
 </head>
 <style type="text/css">
-	.turntable-bg {
+	body {
+		height: 100%;
+		background-color: #ffc300;
 		position: relative;
+	}
+
+	.img {
+		width: 100%;
+		max-width: 100%;
+		display: block;
+	}
+
+	.turntable-bg {
+		position: absolute;
+	    top: 10rem;
+	    left: 50%;
+	    transform: translateX(-50%);
 	}
 
 	.turntable-bg .pointer {
 		position: absolute;
 		left: 50%;
-		top: 3.8rem;
+		top: 4rem;
 		transform:translateX(-50%);
 		z-index: 8;
 	}
 
 	.turntable-bg .pointer img {
-		width: 3rem;
+		width: 5.4rem;
+		height: 7rem;
 	}
 
 	.turntable-bg .rotate {
@@ -35,14 +51,84 @@
 	}
 
 	.rotate img {
-		width: 10rem;
-		transform: rotate(-20deg);
+		width: 14.61rem;
 	}
+
+	.btn-wrap {
+		width: 60%;
+	    margin: 0 auto;
+	    margin-top: 2.5rem;
+	}
+
+	.explain-wrap {
+		padding: 1rem;
+	}
+
+	.text-wrap {
+		background-color: #3c998d;
+	    padding: 0.1rem 0.4rem;
+	    color: #fff;
+	    font-size: 0.6rem;
+	    height: 5rem;
+    	overflow: auto;
+    	word-break: break-all;
+    	margin-bottom: 1rem;
+	}
+
+	.text-wrap .title {
+		display: flex;
+    	align-items: center;
+	}
+
+	.text-wrap .title img {
+		width: 0.6rem;
+    	margin-right: 0.2rem;
+	}
+
 </style>
 <body>
+	<img class="img" src="./img/prize/bg-1.jpg">
 	<div class="turntable-bg">
-	  	<div class="pointer"><img src="./img/pointer.png" alt="pointer"/></div>
-	   	<div class="rotate" ><img id="rotate" src="./img/turntable.png" alt="turntable"/></div>
+	  	<div class="pointer"><img src="./img/prize/pointer.png" alt="pointer"/></div>
+	   	<div class="rotate" ><img id="rotate" src="./img/prize/turntable.png" alt="turntable"/></div>
+	</div>
+
+	<div class="btn-wrap">
+		<img class="img" src="./img/prize/button.png">
+	</div>
+
+	<div class="explain-wrap">
+		<div class="text-wrap">
+			<div class="title">
+				<img src="./img/prize/point.png">
+				<div>奖品设置</div>
+			</div>
+			<div>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+		</div>
+
+		<div class="text-wrap">
+			<div class="title">
+				<img src="./img/prize/point.png">
+				<div>活动时间及活动对象</div>
+			</div>
+			<div>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+		</div>
+
+		<div class="text-wrap">
+			<div class="title">
+				<img src="./img/prize/point.png">
+				<div>活动内容</div>
+			</div>
+			<div>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+		</div>
+
+		<div class="text-wrap">
+			<div class="title">
+				<img src="./img/prize/point.png">
+				<div>奖品兑换</div>
+			</div>
+			<div>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+		</div>
 	</div>
 </body>
 <script type="text/javascript">
@@ -61,29 +147,32 @@ $(function() {
 	};
 
 	$('.pointer').click(function() {
-		var item = rnd(0, 6);
+		var item = rnd(0, 7);
 
 		switch (item) {
 			case 0:
-				rotateFn(0, -20, '谢谢参与');
+				rotateFn(0, 22.5, 'vivo x9s plus');
 				break;
 			case 1:
-				rotateFn(1, 30, '免单4999元');
+				rotateFn(1, 67.5, 'vivo 精美礼品');
 				break;
 			case 2:
-				rotateFn(2, 80, '免单50元');
+				rotateFn(2, 112.5, 'vivo专卖店');
 				break;
 			case 3:
-				rotateFn(3, 130, '免单10元');
+				rotateFn(3, 157.5, '谢谢参与');
 				break;
 			case 4:
-				rotateFn(4, 180, '免单5元');
+				rotateFn(4, 202.5, 'vivo x9s plus');
 				break;
 			case 5:
-				rotateFn(5, 230, '免分期服务费');
+				rotateFn(5, 247.5, 'vivo 精美礼品');
 				break;
 			case 6:
-				rotateFn(6, 280, '提高白条额度');
+				rotateFn(6, 292.5, '200M流量券');
+				break;
+			case 7:
+				rotateFn(7, 337.5, 'vivo专卖店');
 				break;
 		}
 
