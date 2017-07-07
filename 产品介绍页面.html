@@ -11,9 +11,205 @@
     <link rel="stylesheet" type="text/css" href="./css/global.css">
 </head>
 <style type="text/css">
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img {
+    display: inline-block;
+}
+
+.img-block {
+    width: 100%;
+    height: auto;
+    max-width: auto;
+    max-height: auto;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.vivoPro {
+    width: 100%;
+    background-color: #77a7d9;
+    background: -webkit-linear-gradient(#a8c5dc, #4c8dd7);
+    background: -o-linear-gradient(#a8c5dc, #4c8dd7);
+    background: -moz-linear-gradient(#a8c5dc, #4c8dd7);
+    background: linear-gradient(#a8c5dc, #4c8dd7);
+    padding-bottom: 1.066667rem;
+}
+
+.vivoPro .flag {
+    width: 100%;
+    height: 3.562667rem;
+    line-height: 3.562667rem;
+    background: rgba(59, 59, 59, .14);
+    display: block;
+    text-align: center;
+}
+
+.vivoPro .flag img {
+    height: 2.133333rem;
+    vertical-align: middle
+}
+
+.vivoPro .tips {
+    margin: 1.066667rem 0;
+}
+
+.vivoPro .tips li.line1 img {
+    width: 6.336rem;
+}
+
+.vivoPro .tips li.line2 img,
+.vivoPro .tips li.line3 img {
+    width: 3.264rem;
+}
+
+.vivoPro .tips li.tip1 img {
+    width: 8.469333rem;
+}
+
+.vivoPro .tips li.tip2 img {
+    width: 6.656rem;
+}
+
+.vivoPro .tips li.tip3 img {
+    width: 7.722667rem;
+}
+
+.vivoPro .tips li {
+    position: relative;
+}
+
+.vivoPro .tips li.line1,
+.vivoPro .tips li.line2,
+.vivoPro .tips li.line3 {
+    z-index: 1;
+}
+
+.vivoPro .tips li.tip1,
+.vivoPro .tips li.tip2,
+.vivoPro .tips li.tip3 {
+    z-index: 2;
+}
+
+.vivoPro .tips li.tip1 {
+    margin-top: -2.56rem;
+    text-align: left;
+    margin-left: 0.853333rem;
+}
+
+.vivoPro .tips li.line2 {
+    margin-top: -4.266667rem;
+}
+
+.vivoPro .tips li.tip2 {
+    margin-top: -1.066667rem;
+    margin-left: 2.773333rem;
+}
+
+.vivoPro .tips li.line3 {
+    margin-top: -1.066667rem;
+    margin-left: 1.92rem;
+}
+
+.vivoPro .tips li.tip3 {
+    margin-top: -3.2rem;
+    margin-left: -3.2rem;
+}
+
+.vivoPro .tips li span {
+    position: absolute;
+}
+
+.vivoPro .tips li span.text1 {
+    left: 1.066667rem;
+    top: 1.706667rem;
+}
+
+.vivoPro .tips li span.text1 img {
+    width: 6.506667rem;
+}
+
+.vivoPro .tips li span.text2 {
+    right: 4.48rem;
+    top: 1.066667rem;
+}
+
+.vivoPro .tips li span.text2 img {
+    width: 4.970667rem;
+}
+
+.vivoPro .tips li span.text3 {
+    left: 7.466667rem;
+    top: 1.706667rem;
+}
+
+.vivoPro .tips li span.text3 img {
+    width: 4.394667rem;
+}
+
+.tip-super img {
+    width: 0.896rem;
+    margin: 0.64rem 0;
+}
+
+.vivoPro .btn {
+    padding: 1.066667rem 0;
+}
+
+.vivoPro .btn img {
+    height: 2.005333rem;
+}
 </style>
 
 <body>
+    <div class="vivoPro">
+        <div class="topimg"><img src="img/pro/top-img.png" alt="" class="img-block"></div>
+        <div class="flag"><img src="img/pro/pro-flag.png" alt=""></div>
+        <div class="tips text-center">
+            <ul>
+                <li class="line1">
+                    <img src="img/pro/line1.png" alt="">
+                </li>
+                <li class="tip1">
+                    <span class="text1"><img src="img/pro/test1.png" alt=""></span>
+                    <img src="img/pro/tip-1.png" alt="">
+                </li>
+                <li class="line2">
+                    <img src="img/pro/line2.png" alt="">
+                </li>
+                <li class="tip2">
+                    <span class="text2"><img src="img/pro/test2.png" alt=""></span>
+                    <img src="img/pro/tip-2.png" alt="">
+                </li>
+                <li class="line3">
+                    <img src="img/pro/line3.png" alt="">
+                </li>
+                <li class="tip3">
+                    <span class="text3"><img src="img/pro/test3.png" alt=""></span>
+                    <img src="img/pro/tip-3.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="tip-super text-center">
+            <img src="img/pro/tips.png" alt="">
+        </div>
+        <div class="text-center btn">
+            <a href="#?"><img src="img/pro/btn.png" alt=""></a>
+        </div>
+    </div>
 </body>
 <script type="text/javascript">
 /*eslint-disable */
