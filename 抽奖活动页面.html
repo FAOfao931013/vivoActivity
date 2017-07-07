@@ -9,6 +9,8 @@
 	<script type="text/javascript" src='./js/jquery-3.1.1.js'></script>
 	<script type="text/javascript" src='./js/jqueryRotate.js'></script>
 	<link rel="stylesheet" type="text/css" href="./css/global.css">
+	<link rel="stylesheet" type="text/css" href="./css/flex.css">
+	<link rel="stylesheet" type="text/css" href="./css/prize-animation.css">
 </head>
 <style type="text/css">
 	body {
@@ -33,7 +35,7 @@
 	.turntable-bg .pointer {
 		position: absolute;
 		left: 50%;
-		top: 4rem;
+		top: 3.3rem;
 		transform:translateX(-50%);
 		z-index: 8;
 	}
@@ -47,7 +49,7 @@
 		position: absolute;
 		left: 50%;
 		transform:translateX(-50%);
-		top: 0.9rem;
+		top: 0.2rem;
 	}
 
 	.rotate img {
@@ -57,11 +59,11 @@
 	.btn-wrap {
 		width: 60%;
 	    margin: 0 auto;
-	    margin-top: 2.5rem;
+	    margin-top: 1.8rem;
 	}
 
 	.explain-wrap {
-		padding: 1rem;
+		padding: 1rem 1.4rem;
 	}
 
 	.text-wrap {
@@ -75,11 +77,6 @@
     	margin-bottom: 1rem;
 	}
 
-	.text-wrap .title {
-		display: flex;
-    	align-items: center;
-	}
-
 	.text-wrap .title img {
 		width: 0.6rem;
     	margin-right: 0.2rem;
@@ -88,6 +85,25 @@
 </style>
 <body>
 	<img class="img" src="./img/prize/bg-1.jpg">
+
+	<img class="sun" src="./img/prize/sun.png">
+
+	<img class="cloud cloud-1-1" src="./img/prize/cloud-1.png">
+	<img class="cloud cloud-1-2" src="./img/prize/cloud-1.png">
+	<img class="cloud cloud-1-3" src="./img/prize/cloud-1.png">
+
+	<img class="gift gift-1-1" src="./img/prize/gift-1.png">
+	<img class="gift gift-1-2" src="./img/prize/gift-1.png">
+
+	<img class="phone-1" src="./img/prize/phone-1.png">
+	<img class="phone-2" src="./img/prize/phone-2.png">
+	<img class="phone-3" src="./img/prize/phone-3.png">
+
+	<img class="cloud cloud-2-1" src="./img/prize/cloud-2.png">
+
+	<img class="gift gift-2-1" src="./img/prize/gift-2.png">
+	<img class="gift gift-2-2" src="./img/prize/gift-2.png">
+
 	<div class="turntable-bg">
 	  	<div class="pointer"><img src="./img/prize/pointer.png" alt="pointer"/></div>
 	   	<div class="rotate" ><img id="rotate" src="./img/prize/turntable.png" alt="turntable"/></div>
@@ -99,7 +115,7 @@
 
 	<div class="explain-wrap">
 		<div class="text-wrap">
-			<div class="title">
+			<div class="title flex flex-vc" >
 				<img src="./img/prize/point.png">
 				<div>奖品设置</div>
 			</div>
@@ -107,7 +123,7 @@
 		</div>
 
 		<div class="text-wrap">
-			<div class="title">
+			<div class="title flex flex-vc">
 				<img src="./img/prize/point.png">
 				<div>活动时间及活动对象</div>
 			</div>
@@ -115,7 +131,7 @@
 		</div>
 
 		<div class="text-wrap">
-			<div class="title">
+			<div class="title flex flex-vc">
 				<img src="./img/prize/point.png">
 				<div>活动内容</div>
 			</div>
@@ -123,7 +139,7 @@
 		</div>
 
 		<div class="text-wrap">
-			<div class="title">
+			<div class="title flex flex-vc">
 				<img src="./img/prize/point.png">
 				<div>奖品兑换</div>
 			</div>
