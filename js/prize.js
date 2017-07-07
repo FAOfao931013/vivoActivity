@@ -2,6 +2,7 @@
 $(function() {
     //是否已经抽过奖
     var isPrize = false;
+    var openID = '111';
 
     var placeArr = ['.kechengqu', '.qujiangqu', '.jiangshanshi', '.changshanxian', '.kaihuaxian'];
 
@@ -21,18 +22,6 @@ $(function() {
         bodyOverHidden();
     };
 
-    //取消弹框
-    $('.theme_popover_mask,.layer-ok,.layer-bg-three').on('click', function() {
-        $('.theme_popover_mask').fadeOut(100);
-        $('.theme_popover').fadeOut(200);
-        bodyOverNone();
-    });
-
-    //阻止冒泡
-    $('.layer-three-top,.layer-three-main').on('click', function(e) {
-        e.stopPropagation();
-    });
-
     //显示未注册弹窗
     var shouldRegister = function() {
         showMask();
@@ -44,6 +33,25 @@ $(function() {
         showMask();
         $('.had-register').fadeIn(200);
     };
+
+    //判断openID
+    if(openID) {
+        hadRegister();
+    } else {
+        shouldRegister();
+    }
+
+    //取消弹框
+    $('.theme_popover_mask,.layer-ok,.layer-bg-three').on('click', function() {
+        $('.theme_popover_mask').fadeOut(100);
+        $('.theme_popover').fadeOut(200);
+        bodyOverNone();
+    });
+
+    //阻止冒泡
+    $('.layer-three-top,.layer-three-main').on('click', function(e) {
+        e.stopPropagation();
+    });
 
     //模拟placeholder
     $('.phone').on('focus', function(e) {
@@ -228,6 +236,7 @@ $(function() {
     });
 });
 
+//转盘概率
 function rnd(n, m) {
     return Math.floor(Math.random() * (m + 1));
 }
