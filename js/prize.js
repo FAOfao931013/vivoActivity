@@ -3,6 +3,8 @@ $(function() {
     //是否已经抽过奖
     var isPrize = false;
 
+    var placeArr = ['.kechengqu', '.qujiangqu', '.jiangshanshi', '.changshanxian', '.kaihuaxian'];
+
     //禁止滚动
     var bodyOverHidden = function() {
         $('body').addClass('overflow-hidden');
@@ -20,10 +22,15 @@ $(function() {
     };
 
     //取消弹框
-    $('.theme_popover_mask,.layer-ok').click(function() {
+    $('.theme_popover_mask,.layer-ok,.layer-bg-three').on('click', function() {
         $('.theme_popover_mask').fadeOut(100);
         $('.theme_popover').fadeOut(200);
         bodyOverNone();
+    });
+
+    //阻止冒泡
+    $('.layer-three-top,.layer-three-main').on('click', function(e) {
+        e.stopPropagation();
     });
 
     //显示未注册弹窗
@@ -54,11 +61,16 @@ $(function() {
         $('.one-day').fadeIn(200);
     };
 
-    //点击查看奖品
-    $('.layerButton').click(function() {
+    //奖品展示弹窗
+    var placeDetail = function() {
         showMask();
-        $('.tip-cf').fadeIn(200);
-    });
+        $('.place-detail').fadeIn(200);
+    };
+
+    //查看奖品点击事件
+    $('.layerButton').on('click', function() {
+        placeDetail();
+    })
 
     //抽中服务卡和流量券
     var cardFlowText = function(type, text) {
@@ -69,11 +81,73 @@ $(function() {
             $('.tip-cf').addClass('layer-bg-two');
             $('.card-flow').prepend('恭喜您获得' + text);
         }
+        showMask();
+        $('.tip-cf').fadeIn(200);
     }
 
+    //特等奖和一等奖
     var giftPlus = function(prize, text) {
+        $('.exchange-place .three-text p').append(text);
+        $('.exchange-place .three-text h2').append(prize);
         showMask();
         $('.exchange-place').fadeIn(200);
+    };
+
+    //谢谢参与
+    var thankYou = function() {
+        $('.tip-cf').addClass('layer-bg-two');
+        $('.card-flow').prepend('谢谢参与' + '<br>');
+        showMask();
+        $('.tip-cf').fadeIn(200);
+    }
+
+    //选择地址后其他地址禁用
+    placeArr.forEach(function(p) {
+        $(p).change(function() {
+            var that = $(this);
+            if(that.val() === '兑换实体店') {
+                $.each(placeArr, function(index, el) {
+                    $(el).attr('disabled', false);
+                });
+            } else {
+                $.each(placeArr, function(index, el) {
+                    if (el.substr(1) !== that.attr('class')) {
+                        $(el).attr('disabled', true);
+                    }
+                });
+            }
+        });
+    });
+
+    //中奖未选地址
+    var noPlace = function() {
+        showMask();
+        $('.no-place').fadeIn(200);
+        $('.no-place').addClass('z-index-99999');
+    };
+
+    $('.no-place-ok').on('click', function() {
+        $('.no-place').fadeOut(200);
+    });
+
+    $('.three-main-form .layer-submit').on('click', function() {
+        var openNoPlace = true;
+
+        $.each(placeArr, function(index, el) {
+            if ($(el).val() !== '兑换实体店') {
+                openNoPlace = false;
+            };
+        });
+
+        if (openNoPlace) {
+            noPlace();
+        }
+    });
+
+    //奖品没了
+    var prizeOver = function() {
+        showMask();
+        $('.prize-over').fadeIn(200);
     };
 
     //转盘处理
@@ -95,7 +169,7 @@ $(function() {
                         cardFlowText('card', text);
                         break;
                     case 3:
-
+                        thankYou();
                         break;
                     case 4:
                         giftPlus('特等奖', text);
@@ -125,7 +199,7 @@ $(function() {
             isPrize = true;
         }
 
-        switch (0) {
+        switch (item) {
             case 0:
                 rotateFn(0, 22.5, 'vivo x9s plus一台');
                 break;
