@@ -1,0 +1,380 @@
+body {
+    height: 100%;
+    background-color: #ffc300;
+    position: relative;
+    overflow-x: hidden;
+}
+
+a,
+a:hover {
+    color: #fff;
+    text-decoration: none
+}
+
+input,
+select {
+    width: 100%;
+}
+
+.img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.orange {
+    color: #ff4141;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.turntable-bg {
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.turntable-bg .pointer {
+    position: absolute;
+    left: 50%;
+    top: 3.3rem;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 8;
+}
+
+.turntable-bg .pointer img {
+    width: 5.4rem;
+    height: 7rem;
+}
+
+.turntable-bg .rotate {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 0.2rem;
+}
+
+.rotate img {
+    width: 14.61rem;
+}
+
+.btn-wrap {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 1.8rem;
+}
+
+.explain-wrap {
+    padding: 1rem 1.4rem;
+}
+
+.text-wrap {
+    background-color: #3c998d;
+    border-radius: 0.106667rem;
+    padding: 0.426667rem 0.64rem;
+    color: #fff;
+    font-size: 0.64rem;
+    height: 5rem;
+    overflow: auto;
+    word-break: break-all;
+    margin-bottom: 0.426667rem;
+    line-height: 1.066667rem;
+}
+
+.text-wrap .title {
+    margin-bottom: 0.32rem;
+    font-size: 0.768rem;
+}
+
+.text-wrap .title img {
+    width: 0.6rem;
+    margin-right: 0.2rem;
+}
+
+
+/***弹窗***/
+
+.theme_popover_mask {
+    z-index: 9998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.theme_popover {
+    z-index: 9999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 0.768rem;
+    display: none;
+}
+
+.theme_popover.layer-bg-one {
+    width: 11.882667rem;
+    height: 7.658667rem;
+    background: url("../img/prize/layer-bg-one.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 3.733333rem 0.64rem 0.64rem;
+}
+
+.theme_popover .layer-one-text {
+    position: relative;
+    top: 0;
+    bottom: 2.005333rem;
+    right: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.theme_popover .layer-one-text p {
+    line-height: 1.173333rem;
+    vertical-align: middle;
+    padding: 0 0.426667rem;
+}
+
+.theme_popover .layer-btn {
+    width: 11.264rem;
+    height: 2.005333rem;
+    line-height: 2.005333rem;
+    position: absolute;
+    bottom: 1.066667rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    font-size: 1.024rem;
+    background: url("../img/prize/layer-one-btn.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.theme_popover.layer-bg-two {
+    width: 11.669333rem;
+    height: 4.544rem;
+    background: url("../img/prize/layer-bg-two.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 9.706667rem 1.066667rem 1.066667rem;
+    font-size: 1.024rem;
+}
+
+.theme_popover.layer-bg-two .layer-one-text p {
+    line-height: normal;
+}
+
+.theme_popover.layer-bg-two .layer-one-text p small {
+    font-size: 0.512rem;
+    color: #c20001;
+}
+
+.theme_popover.layer-bg-three {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+.theme_popover.layer-bg-three .layer-three-top {
+    width: 6.250667rem;
+    height: 6.485333rem;
+    margin-left: 3.3rem;
+    background: url("../img/prize/layer-bg-three-top.png") no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding: 3.413333rem 0 0 1.109333rem;
+}
+
+.theme_popover.layer-bg-three .layer-three-top .three-text {
+    width: 5.333333rem;
+}
+
+.three-text p {
+    width: 100%;
+    height: 0.96rem;
+    line-height: 0.96rem;
+    font-size: 0.512rem;
+    margin-top: 0.384rem;
+}
+
+.three-text span {
+    margin-top: 0.256rem;
+    display: block;
+}
+
+.three-text span h2 {
+    padding: 0.32rem 0 0.106667rem 0;
+}
+
+.three-text small {
+    font-size: 0.512rem;
+}
+
+.theme_popover.layer-bg-three .layer-three-main {
+    width: 14.037333rem;
+    height: 2.133333rem;
+    margin-top: -2.304rem;
+}
+
+.theme_popover.layer-bg-three .layer-three-main .three-main-top {
+    width: 14.037333rem;
+    height: 3.008rem;
+    background: url("../img/prize/layer-three-3.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.theme_popover.layer-bg-three .layer-three-main .three-main-form {
+    margin-top: -0.021333rem;
+    height: 11.733333rem;
+    background-color: #77a7d9;
+    background: -webkit-linear-gradient(#4c8ed7, #9dc4ef);
+    background: -o-linear-gradient(#4c8ed7, #9dc4ef);
+    background: -moz-linear-gradient(#4c8ed7, #9dc4ef);
+    background: linear-gradient(#4c8ed7, #9dc4ef);
+    padding: 1.066667rem;
+    overflow: auto;
+}
+
+.three-main-form .form-group {
+    margin-bottom: 0.64rem;
+}
+
+.three-main-form .form-group label img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -0.106667rem;
+    margin-right: 0.213333rem;
+}
+
+.three-main-form .form-group select {
+    width: 12.010667rem;
+    height: 1.28rem;
+    font-size: 0.512rem;
+    margin-top: 0.32rem;
+    padding: 0 0.106667rem;
+}
+
+.three-main-form .form-group .layer-submit {
+    width: 11.264rem;
+    height: 2.005333rem;
+    line-height: 2.005333rem;
+    color: #fff;
+    font-size: 1.024rem;
+    background: url("../img/prize/layer-one-btn.png") no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    margin: 1.066667rem auto 0;
+}
+
+.theme_popover.layer-bg-four {
+    width: 12.16rem;
+    height: 14.933333rem;
+    background: url("../img/prize/layer-bg-four.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding: 4.096rem 1.066667rem 3.797333rem;
+    text-align: center;
+}
+
+.theme_popover.layer-bg-four h1 {
+    font-size: 1.813333rem;
+    color: #c20001;
+    font-weight: 100;
+    padding: 0.213333rem 0;
+    text-align: center;
+}
+
+.theme_popover.layer-bg-four h1 small {
+    font-size: 0.981333rem;
+    color: #1c254f;
+    display: block;
+    padding: 0.426667rem 0;
+}
+
+.theme_popover.layer-bg-four h1 i {
+    font-style: normal;
+    display: block;
+    font-size: 0.469333rem;
+}
+
+.theme_popover.layer-bg-four span,
+.theme_popover.layer-bg-four div {
+    display: inline-block;
+    vertical-align: top;
+    color: #1c254f;
+    margin-bottom: 0.426667rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.theme_popover.layer-bg-four span {
+    width: 3.84rem;
+    font-size: 0.704rem;
+    text-align: right;
+}
+
+.theme_popover.layer-bg-four div {
+    width: 8.106667rem;
+}
+
+.theme_popover.layer-bg-four h5 {
+    font-weight: 100;
+    font-size: 0.704rem;
+    padding-top: 0.853333rem;
+}
+
+.theme_popover.layer-bg-five {
+    width: 12.032rem;
+    background: rgba(26, 26, 26, .6);
+    box-shadow: 0.128rem 0.128rem 0.213333rem #0b0a09;
+    padding: 1.706667rem;
+}
+
+.theme_popover.layer-bg-five .form-group {
+    margin-bottom: 1.066667rem;
+}
+
+.theme_popover.layer-bg-five .form-group input,
+.theme_popover.layer-bg-five .form-group select {
+    width: 90%;
+    height: 1.813333rem;
+    font-size: 0.768rem;
+    background: rgba(255, 255, 255, .5);
+    border: 0;
+    color: #fff;
+    padding: 0 5%;
+}
+
+.theme_popover.layer-bg-five .form-group select {
+    width: 100%;
+}
+
+.theme_popover.layer-bg-five .five-btn {
+    width: 100%;
+    height: 1.813333rem;
+    line-height: 1.813333rem;
+    background: #0976a9;
+    box-shadow: 0 0.106667rem 0.213333rem #1e1b0d;
+    display: block;
+    text-align: center;
+}
