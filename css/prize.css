@@ -22,6 +22,14 @@ select {
     display: block;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
 .orange {
     color: #ff4141;
 }
@@ -363,6 +371,12 @@ select {
     border: 0;
     color: #fff;
     padding: 0 5%;
+}
+
+.triangle-img {
+    position: absolute;
+    top: 1.8rem;
+    left: 12rem;
 }
 
 .theme_popover.layer-bg-five .form-group select {
