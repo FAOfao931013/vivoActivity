@@ -4,6 +4,7 @@ $(function() {
     var isPrize = false;
     var openID = '111';
 
+    //地区下拉框
     var placeArr = ['.kechengqu', '.qujiangqu', '.jiangshanshi', '.changshanxian', '.kaihuaxian'];
 
     //禁止滚动
@@ -134,10 +135,12 @@ $(function() {
         $('.no-place').addClass('z-index-99999');
     };
 
+    //隐藏中奖未选地址弹窗
     $('.no-place-ok').on('click', function() {
         $('.no-place').fadeOut(200);
     });
 
+    //判断未选地址
     $('.three-main-form .layer-submit').on('click', function() {
         var openNoPlace = true;
 
