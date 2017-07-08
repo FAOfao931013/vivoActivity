@@ -41,6 +41,11 @@ select {
 .theme_popover.layer-bg-four div.detail-wrap {
     width: 12.16rem;
     height: 14.933333rem;
+    margin-bottom: 3.2rem;
+}
+
+.theme_popover.layer-bg-four div.detail-wrap:last-child {
+    margin-bottom: 0;
 }
 
 .orange {

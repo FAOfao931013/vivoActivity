@@ -5,7 +5,7 @@ $(function() {
         $('.btn-wrap').animate({
                 'opacity': '1',
             },
-            1000,
+            600,
             function() {
                 $('.btn-wrap img').addClass('heart-pound')
             });
@@ -16,18 +16,18 @@ $(function() {
         $('.tip-down').animate({
                 'opacity': '1',
             },
-            1000,
+            600,
             function() {
                 btnShow();
             });
     };
 
-    //第三段文字第一行
+    //第三段文字第二行
     var tip3Text2Shpw = function() {
         $('.tip3-text2').show().addClass('write-word-5');
         setTimeout(function() {
             tipDownShow();
-        }, 2000)
+        }, 1800)
     };
 
     //第三段文字第一行
@@ -35,7 +35,7 @@ $(function() {
         $('.tip3-text1').show().addClass('write-word-4');
         setTimeout(function() {
             tip3Text2Shpw();
-        }, 2000)
+        }, 1800)
     };
 
     //第三个对话框
@@ -43,7 +43,7 @@ $(function() {
         $('.tip3-img').show();
         setTimeout(function() {
             tip3Text1Shpw();
-        }, 1600)
+        }, 1000)
     };
 
     //第三根线
@@ -51,7 +51,7 @@ $(function() {
         $('.line3').animate({
                 'opacity': '1',
             },
-            1000,
+            600,
             function() {
                 tip3ImgShow();
             });
@@ -62,7 +62,7 @@ $(function() {
         $('.tip2-text2').show().addClass('write-word-3');
         setTimeout(function() {
             line3Show();
-        }, 2000)
+        }, 1800)
     };
 
     //第二段文字第一行
@@ -70,7 +70,7 @@ $(function() {
         $('.tip2-text1').show().addClass('write-word-2');
         setTimeout(function() {
             tip2Text2Show();
-        }, 2000)
+        }, 1800)
     };
 
     //第二个对话框
@@ -78,7 +78,7 @@ $(function() {
         $('.tip2-img').show();
         setTimeout(function() {
             tip2Text1Show();
-        }, 1600)
+        }, 1000)
     };
 
     //第二根线
@@ -86,7 +86,7 @@ $(function() {
         $('.line2').animate({
                 'opacity': '1',
             },
-            1000,
+            600,
             function() {
                 tip2ImgShow();
             });
@@ -97,7 +97,7 @@ $(function() {
         $('.tip1').show().addClass('write-word-1');
         setTimeout(function() {
             line2Show();
-        }, 2300)
+        }, 1800)
     };
 
     //第一个对话框
@@ -105,7 +105,7 @@ $(function() {
         $('.tip1-img').show();
         setTimeout(function() {
             tip1Show();
-        }, 1600)
+        }, 1000)
     };
 
     //第一根线
@@ -113,7 +113,7 @@ $(function() {
         $('.line1').animate({
                 'opacity': '1',
             },
-            1000,
+            600,
             function() {
                 tip1ImgMove();
             });
@@ -124,7 +124,7 @@ $(function() {
         $('.flag img').animate({
                 'opacity': '1',
             },
-            1000,
+            600,
             function() {
                 line1Show();
             });
@@ -135,7 +135,7 @@ $(function() {
         $('.flag').animate({
                 'right': '0rem',
             },
-            2000,
+            800,
             function() {
                 flagTextShow();
             });
@@ -146,7 +146,7 @@ $(function() {
         $('.topimg').animate({
                 'top': '0rem',
             },
-            2000,
+            800,
             function() {
                 flagMove();
             });
