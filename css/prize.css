@@ -301,13 +301,13 @@ select {
     background: #fff;
     color: #a7a7a7;
 }
+
 .three-main-form .form-group .blank-triangle {
     position: absolute;
     top: 1.9rem;
     right: 0.2rem;
     width: 0.768rem;
 }
-
 
 .three-main-form .form-group .layer-submit {
     width: 11.264rem;
@@ -322,14 +322,12 @@ select {
 }
 
 .theme_popover.layer-bg-four {
-    width: 12.16rem;
-    height: 14.933333rem;
+    width: 14.293333rem;
+    height: 22.826667rem;
     background: url("../img/prize/layer-bg-four.png") no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
-    padding: 4.096rem 1.066667rem 3.797333rem;
     text-align: center;
-    overflow: auto;
 }
 
 .theme_popover.layer-bg-four h1 {
@@ -353,8 +351,8 @@ select {
     font-size: 0.469333rem;
 }
 
-.theme_popover.layer-bg-four span,
-.theme_popover.layer-bg-four div {
+.theme_popover.layer-bg-four .detail-wrap span,
+.theme_popover.layer-bg-four .detail-wrap div {
     display: inline-block;
     vertical-align: top;
     color: #1c254f;
@@ -364,13 +362,13 @@ select {
     text-align: left;
 }
 
-.theme_popover.layer-bg-four span {
+.theme_popover.layer-bg-four .detail-wrap span {
     width: 3.84rem;
     font-size: 0.704rem;
     text-align: right;
 }
 
-.theme_popover.layer-bg-four div {
+.theme_popover.layer-bg-four .detail-wrap div {
     width: 8.106667rem;
 }
 
@@ -421,4 +419,11 @@ select {
     box-shadow: 0 0.106667rem 0.213333rem #1e1b0d;
     display: block;
     text-align: center;
+}
+
+.theme_popover.layer-bg-four div.details {
+    width: 12.16rem;
+    height: 14.933333rem;
+    margin: 4.096rem 1.066667rem 3.797333rem;
+    overflow-y: auto;
 }
