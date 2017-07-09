@@ -166,7 +166,7 @@ $(function() {
         $('#rotate').stopRotate();
         $('#rotate').rotate({
             angle: 0,
-            animateTo: angles + 720,
+            animateTo: angles + 1800,
             duration: 1000,
             callback: function() {
                 switch(awards) {
